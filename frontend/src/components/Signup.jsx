@@ -78,7 +78,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:3001/signup", {
+      const response = await fetch("https://mern-proj-1vx4.onrender.com/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ firstname, lastname, email, password }),
