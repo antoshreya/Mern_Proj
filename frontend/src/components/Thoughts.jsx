@@ -23,7 +23,7 @@ const Thoughts = () => {
     }
 
     try {
-      // Store the thought in localStorage and sessionStorage
+     
       localStorage.setItem("thought", thought);
       sessionStorage.setItem("thought", thought);
 
@@ -37,7 +37,7 @@ const Thoughts = () => {
 
       if (response.ok) {
         alert("Thought saved successfully!");
-        navigate("/blogs"); // Redirect to Blog Suggestions page
+        setThought(""); // Clear input after saving
       } else {
         alert(data.message || "Something went wrong");
       }

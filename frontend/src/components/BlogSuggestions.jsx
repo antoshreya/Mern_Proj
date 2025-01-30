@@ -1,4 +1,4 @@
-// import "../css/BlogSuggestions.css"; 
+
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -7,9 +7,9 @@ const BlogSuggestions = () => {
   const [userThoughts, setUserThoughts] = useState("");
 
   useEffect(() => {
-    // Retrieve the stored thought from sessionStorage first, then localStorage
+    
     const storedThought = sessionStorage.getItem("thought") || localStorage.getItem("thought") || "";
-    console.log("Retrieved Thought from Storage:", storedThought); // Debugging Log
+    console.log("Retrieved Thought from Storage:", storedThought); 
     setUserThoughts(storedThought);
   }, []);
 
